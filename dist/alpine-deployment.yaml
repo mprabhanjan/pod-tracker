@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alpine-test-deployment
+  labels:
+    app: alpine-test
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: alpine-test
+  template:
+    metadata:
+      labels:
+        app: alpine-test
+    spec:
+      containers:
+      - name: alpine
+        image: alpine:latest
+        # Crucial: Prevent the container from exiting immediately
+        command: ["/bin/sh", "-c", "sleep infinity"]
+        # Crucial: Use the image you loaded into Kind
+        imagePullPolicy: IfNotPresent

@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- mahioperators_v1alpha1_podtracker.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

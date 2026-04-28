@@ -1,0 +1,10 @@
+apiVersion: mahioperators.mahioperators.com/v1alpha1
+kind: PodTracker
+metadata:
+  labels:
+    app.kubernetes.io/name: pod-tracker
+  name: podtracker-sample-1
+spec:
+  name: "cluster-tracker-gchat-integ"
+  report:
+    webhook: "https://chat.googleapis.com/v1/spaces/...."
