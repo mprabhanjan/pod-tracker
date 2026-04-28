@@ -1,10 +1,8 @@
 # pod-tracker
-// TODO(user): Add simple overview of use/purpose
-
-## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+This is a sample Kubernetes Operator built using the Operator-SDK. This tracks all pod create/update/delete events in the cluster and sends messages about them to a specified gChat channel.
 
 ## Getting Started
+See the rules in the Makefile, and follow the steps at https://sdk.operatorframework.io/docs/building-operators/golang/tutorial/
 
 ### Prerequisites
 - go version v1.24.0+
